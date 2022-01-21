@@ -7,7 +7,7 @@ type OrderStatus = 'open' | 'closed';
 
 // *** Class without principles ***
 
-export class ShoppingCart {
+export class ShoppingCartLegacy {
   private readonly _items: CartItem[] = [];
   private _orderStatus: OrderStatus = 'open';
   addItem(item: CartItem): void {
@@ -66,15 +66,15 @@ export class ShoppingCart {
   }
 }
 
-const shoppingCart = new ShoppingCart();
+const shoppingCartLegacy = new ShoppingCartLegacy();
 
-shoppingCart.addItem({ name: 't-shirt', price: 49.99 });
-shoppingCart.addItem({ name: 'pants', price: 139.99 });
-shoppingCart.addItem({ name: 'belt', price: 29.99 });
+shoppingCartLegacy.addItem({ name: 't-shirt', price: 49.99 });
+shoppingCartLegacy.addItem({ name: 'pants', price: 139.99 });
+shoppingCartLegacy.addItem({ name: 'belt', price: 29.99 });
 
-console.log(shoppingCart.items);
-console.log(shoppingCart.total());
+console.log(shoppingCartLegacy.items);
+console.log(shoppingCartLegacy.total());
 
-shoppingCart.checkout();
-console.log(shoppingCart.orderStatus);
-console.log(shoppingCart.items.length);
+shoppingCartLegacy.checkout();
+console.log(shoppingCartLegacy.orderStatus);
+console.log(shoppingCartLegacy.items.length);
