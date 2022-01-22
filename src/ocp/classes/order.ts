@@ -24,7 +24,7 @@ export class Order {
     this._orderStatus = 'closed';
 
     this.messaging.sendMessage(
-      `Congratulations!!!\nYour order with total of $${this.cart.total()} has been successfully received.`,
+      `Congratulations!!!\nYour order with total of $${this.cart.totalWithDiscount()} has been successfully received.`,
     );
 
     this.persistence.saveOrder();
